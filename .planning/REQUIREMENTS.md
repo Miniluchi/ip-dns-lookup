@@ -79,8 +79,8 @@
 | FOUND-08 | Phase 1 | Pending |
 | SRCH-01 | Phase 2 | Pending |
 | SRCH-02 | Phase 2 | Pending |
-| SRCH-03 | Phase 2 | Pending |
-| SRCH-04 | Phase 2 | Pending |
+| SRCH-03 | Phase 3 | Pending |
+| SRCH-04 | Phase 3 | Pending |
 | CARD-01 | Phase 2 | Pending |
 | CARD-02 | Phase 2 | Pending |
 | CARD-03 | Phase 2 | Pending |
@@ -89,7 +89,7 @@
 | CARD-06 | Phase 2 | Pending |
 | CARD-07 | Phase 2 | Pending |
 | UI-01 | Phase 2 | Pending |
-| UI-02 | Phase 2 | Pending |
+| UI-02 | Phase 3 | Pending |
 | UI-03 | Phase 3 | Pending |
 | UI-04 | Phase 2 | Pending |
 
@@ -100,4 +100,4 @@
 
 ---
 *Requirements defined: 2026-03-21*
-*Last updated: 2026-03-21 after initial definition*
+*Last updated: 2026-03-21 — traceability corrected after roadmap: SRCH-03, SRCH-04, UI-02 moved to Phase 3 (polish layer)*
