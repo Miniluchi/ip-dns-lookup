@@ -7,7 +7,7 @@
 
 ### Foundation
 
-- [ ] **FOUND-01**: Project scaffolded with Next.js 14+ App Router, TypeScript, Tailwind CSS, and shadcn/ui
+- [x] **FOUND-01**: Project scaffolded with Next.js 14+ App Router, TypeScript, Tailwind CSS, and shadcn/ui
 - [ ] **FOUND-02**: `detectInputType(input)` utility correctly identifies IPv4, IPv6, and domain inputs
 - [ ] **FOUND-03**: Input sanitization strips `https?://` prefixes and trailing paths before querying
 - [ ] **FOUND-04**: `GET /api/geo?q={ip}` route handler proxies ip-api.com and returns geolocation data
@@ -69,7 +69,7 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUND-01 | Phase 1 | Pending |
+| FOUND-01 | Phase 1 | Complete |
 | FOUND-02 | Phase 1 | Pending |
 | FOUND-03 | Phase 1 | Pending |
 | FOUND-04 | Phase 1 | Pending |
