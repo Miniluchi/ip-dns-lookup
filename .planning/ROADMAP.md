@@ -28,11 +28,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. `curl http://localhost:3000/api/rdns?q=8.8.8.8` returns a PTR hostname string
   4. `curl http://localhost:3000/api/whois?q=example.com` returns registrar, creation date, expiry date fields
   5. `detectInputType('192.168.1.1')` returns `'ipv4'`, a domain returns `'domain'`, and `'https://example.com/path'` is sanitized to `'example.com'` before classification
-**Plans:** 1/3 plans executed
+**Plans:** 2/3 plans executed
 
 Plans:
 - [x] 01-01: Scaffold Next.js 15 project with TypeScript, Tailwind CSS v4, shadcn/ui (New York), and next-themes
-- [ ] 01-02: Implement `detectInputType` utility and input sanitization; add private/reserved IP short-circuit logic
+- [x] 01-02: Implement `detectInputType` utility and input sanitization; add private/reserved IP short-circuit logic
 - [ ] 01-03: Build all 4 API route handlers (`/api/geo`, `/api/dns`, `/api/rdns`, `/api/whois`) with normalized error shapes
 
 ### Phase 2: Core UI
@@ -74,7 +74,7 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 1/3 | In Progress|  |
+| 1. Foundation | 2/3 | In Progress|  |
 | 2. Core UI | 0/3 | Not started | - |
 | 3. Polish | 0/2 | Not started | - |
 
