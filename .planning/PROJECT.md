@@ -12,15 +12,14 @@ Any IP or domain resolved in one search, with all lookup types shown simultaneou
 
 ### Validated
 
-(None yet — ship to validate)
+- [x] Single search bar that auto-detects IP vs. domain input — Validated in Phase 01: Foundation
+- [x] Geolocation card — country, city, region, ASN, ISP (via ip-api.com) — Validated in Phase 01: Foundation
+- [x] DNS records card — A, AAAA, MX, TXT, NS, CNAME records (via dns.google) — Validated in Phase 01: Foundation
+- [x] Reverse DNS card — PTR lookup from IP to hostname — Validated in Phase 01: Foundation
+- [x] WHOIS card — registrar, registration/expiry dates, status (via RDAP) — Validated in Phase 01: Foundation
 
 ### Active
 
-- [ ] Single search bar that auto-detects IP vs. domain input
-- [ ] Geolocation card — country, city, region, ASN, ISP (via ip-api.com)
-- [ ] DNS records card — A, AAAA, MX, TXT, NS, CNAME records (via dns.google)
-- [ ] Reverse DNS card — PTR lookup from IP to hostname
-- [ ] WHOIS card — registrar, registration/expiry dates, status (via RDAP)
 - [ ] 2×2 card grid layout, all cards load in parallel
 - [ ] Loading skeletons while queries are in flight
 - [ ] Error states per card (one failing API doesn't break others)
@@ -72,4 +71,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-21 after initialization*
+*Last updated: 2026-03-22 — Phase 01 complete (scaffold + utilities TDD + API routes)*
