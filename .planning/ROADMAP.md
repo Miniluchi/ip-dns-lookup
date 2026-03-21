@@ -28,7 +28,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. `curl http://localhost:3000/api/rdns?q=8.8.8.8` returns a PTR hostname string
   4. `curl http://localhost:3000/api/whois?q=example.com` returns registrar, creation date, expiry date fields
   5. `detectInputType('192.168.1.1')` returns `'ipv4'`, a domain returns `'domain'`, and `'https://example.com/path'` is sanitized to `'example.com'` before classification
-**Plans**: TBD
+**Plans:** 3 plans
 
 Plans:
 - [ ] 01-01: Scaffold Next.js 15 project with TypeScript, Tailwind CSS v4, shadcn/ui (New York), and next-themes
@@ -45,7 +45,7 @@ Plans:
   3. Killing one API route (e.g., commenting out `/api/whois`) causes only the WHOIS card to show an error; the other 3 cards still load correctly
   4. Searching a domain hides the Reverse DNS card; searching an IP hides no geo/rdns cards
   5. The 2-column card grid renders correctly and all card data is readable with shadcn/ui styling
-**Plans**: TBD
+**Plans:** TBD
 
 Plans:
 - [ ] 02-01: Build `useLookup` hook — `Promise.allSettled` orchestration, `CardState<T>` per card, `detectInputType` integration
@@ -61,7 +61,7 @@ Plans:
   2. On initial page load with no `?q=` param, the dashboard auto-populates and searches the visitor's own public IP
   3. Clicking the copy icon on any record value writes it to the clipboard
   4. The dark/light mode toggle switches the theme without a flash of unstyled content on page load
-**Plans**: TBD
+**Plans:** TBD
 
 Plans:
 - [ ] 03-01: Implement `?q=` URL param — read on mount to auto-trigger lookup; update on each search
