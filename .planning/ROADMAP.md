@@ -12,7 +12,7 @@ Three phases take the project from zero to a polished, deployable tool. Phase 1 
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - Scaffold the project and build all 4 API route handlers with input detection utilities
+- [x] **Phase 1: Foundation** - Scaffold the project and build all 4 API route handlers with input detection utilities (completed 2026-03-21)
 - [ ] **Phase 2: Core UI** - Build the useLookup hook, search bar, and all 4 card components to produce a working product
 - [ ] **Phase 3: Polish** - Add URL state, "My IP" auto-load, copy-to-clipboard, dark mode, and responsive layout
 
@@ -28,12 +28,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. `curl http://localhost:3000/api/rdns?q=8.8.8.8` returns a PTR hostname string
   4. `curl http://localhost:3000/api/whois?q=example.com` returns registrar, creation date, expiry date fields
   5. `detectInputType('192.168.1.1')` returns `'ipv4'`, a domain returns `'domain'`, and `'https://example.com/path'` is sanitized to `'example.com'` before classification
-**Plans:** 2/3 plans executed
+**Plans:** 3/3 plans complete
 
 Plans:
 - [x] 01-01: Scaffold Next.js 15 project with TypeScript, Tailwind CSS v4, shadcn/ui (New York), and next-themes
 - [x] 01-02: Implement `detectInputType` utility and input sanitization; add private/reserved IP short-circuit logic
-- [ ] 01-03: Build all 4 API route handlers (`/api/geo`, `/api/dns`, `/api/rdns`, `/api/whois`) with normalized error shapes
+- [x] 01-03: Build all 4 API route handlers (`/api/geo`, `/api/dns`, `/api/rdns`, `/api/whois`) with normalized error shapes
 
 ### Phase 2: Core UI
 **Goal**: A fully functional single-page lookup — search fires 4 parallel requests, each card independently shows skeleton, error, or data.
@@ -74,7 +74,7 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 2/3 | In Progress|  |
+| 1. Foundation | 3/3 | Complete   | 2026-03-21 |
 | 2. Core UI | 0/3 | Not started | - |
 | 3. Polish | 0/2 | Not started | - |
 

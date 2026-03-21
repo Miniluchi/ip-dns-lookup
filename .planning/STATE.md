@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 01-foundation/01-02-PLAN.md
-last_updated: "2026-03-21T23:50:08.253Z"
+stopped_at: Completed 01-foundation/01-03-PLAN.md
+last_updated: "2026-03-21T23:54:06.731Z"
 progress:
   total_phases: 3
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 3
-  completed_plans: 2
+  completed_plans: 3
 ---
 
 # Project State
@@ -48,6 +48,7 @@ Plan: 3 of 3
 *Updated after each plan completion*
 | Phase 01-foundation P01 | 5min | 2 tasks | 10 files |
 | Phase 01-foundation P02 | 4min | 2 tasks | 3 files |
+| Phase 01 P03 | 1 | 3 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -63,6 +64,8 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: vitest --passWithNoTests added to npm test script — exits 0 before test files exist
 - [Phase 01-foundation]: isPrivateIp uses manual arithmetic (no CIDR library) — keeps zero new dependencies and matches plan spec
 - [Phase 01-foundation]: sanitizeInput strips protocol/path first so detectInputType handles pasted URLs transparently
+- [Phase 01-foundation]: detectInputType import removed from dns route handler — DNS accepts any hostname/IP and does not need type gating
+- [Phase 01-foundation]: RDNS route returns 422 INVALID_INPUT for domain inputs — reverse DNS requires an IP
 
 ### Pending Todos
 
@@ -77,6 +80,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-21T23:50:08.250Z
-Stopped at: Completed 01-foundation/01-02-PLAN.md
+Last session: 2026-03-21T23:54:06.729Z
+Stopped at: Completed 01-foundation/01-03-PLAN.md
 Resume file: None
