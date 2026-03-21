@@ -8,13 +8,13 @@
 ### Foundation
 
 - [x] **FOUND-01**: Project scaffolded with Next.js 14+ App Router, TypeScript, Tailwind CSS, and shadcn/ui
-- [ ] **FOUND-02**: `detectInputType(input)` utility correctly identifies IPv4, IPv6, and domain inputs
-- [ ] **FOUND-03**: Input sanitization strips `https?://` prefixes and trailing paths before querying
+- [x] **FOUND-02**: `detectInputType(input)` utility correctly identifies IPv4, IPv6, and domain inputs
+- [x] **FOUND-03**: Input sanitization strips `https?://` prefixes and trailing paths before querying
 - [ ] **FOUND-04**: `GET /api/geo?q={ip}` route handler proxies ip-api.com and returns geolocation data
 - [ ] **FOUND-05**: `GET /api/dns?q={domain}` route handler proxies dns.google for A, AAAA, MX, TXT, NS, CNAME records
 - [ ] **FOUND-06**: `GET /api/rdns?q={ip}` route handler performs PTR lookup via dns.google
 - [ ] **FOUND-07**: `GET /api/whois?q={input}` route handler queries RDAP and returns registration data
-- [ ] **FOUND-08**: Private/reserved IP ranges are detected and short-circuited before API calls
+- [x] **FOUND-08**: Private/reserved IP ranges are detected and short-circuited before API calls
 
 ### Search
 
@@ -70,13 +70,13 @@
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | FOUND-01 | Phase 1 | Complete |
-| FOUND-02 | Phase 1 | Pending |
-| FOUND-03 | Phase 1 | Pending |
+| FOUND-02 | Phase 1 | Complete |
+| FOUND-03 | Phase 1 | Complete |
 | FOUND-04 | Phase 1 | Pending |
 | FOUND-05 | Phase 1 | Pending |
 | FOUND-06 | Phase 1 | Pending |
 | FOUND-07 | Phase 1 | Pending |
-| FOUND-08 | Phase 1 | Pending |
+| FOUND-08 | Phase 1 | Complete |
 | SRCH-01 | Phase 2 | Pending |
 | SRCH-02 | Phase 2 | Pending |
 | SRCH-03 | Phase 3 | Pending |
