@@ -1,17 +1,16 @@
 import type { NextRequest } from 'next/server'
 import { isPrivateIp } from '@/lib/detect-input-type'
 
+const FIELDS = 'status,message,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,query'
+
 export async function GET(request: NextRequest) {
   const q = request.nextUrl.searchParams.get('q')
 
-  if (!q) {
-    return Response.json(
-      { error: { code: 'INVALID_INPUT', message: 'q parameter is required' } },
-      { status: 422 }
-    )
-  }
+  const apiUrl = q
+    ? `http://ip-api.com/json/${encodeURIComponent(q)}?fields=${FIELDS}`
+    : `http://ip-api.com/json/?fields=${FIELDS}`
 
-  if (isPrivateIp(q)) {
+  if (q && isPrivateIp(q)) {
     return Response.json(
       {
         error: {
@@ -24,10 +23,7 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const res = await fetch(
-      `http://ip-api.com/json/${encodeURIComponent(q)}?fields=status,message,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,query`,
-      { cache: 'no-store' }
-    )
+    const res = await fetch(apiUrl, { cache: 'no-store' })
 
     if (!res.ok) {
       return Response.json(
