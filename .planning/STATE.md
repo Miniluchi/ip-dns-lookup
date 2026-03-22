@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 03-01-PLAN.md
-last_updated: "2026-03-22T19:19:14.034Z"
+stopped_at: Completed 03-polish-02-PLAN.md
+last_updated: "2026-03-22T19:19:48.385Z"
 progress:
   total_phases: 3
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 9
-  completed_plans: 8
+  completed_plans: 9
 ---
 
 # Project State
@@ -54,6 +54,7 @@ Plan: 2 of 2
 | Phase 02-core-ui P03 | 1min | 2 tasks | 2 files |
 | Phase 02-core-ui P04 | 5min | 2 tasks | 2 files |
 | Phase 03-polish P01 | 8min | 2 tasks | 3 files |
+| Phase 03-polish P02 | 5min | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -83,6 +84,9 @@ Recent decisions affecting current work:
 - [Phase 03-polish]: Bare /api/geo call detects visitor IP server-side via ip-api.com — q && guard before isPrivateIp skips private IP check for bare calls
 - [Phase 03-polish]: resolvedTheme + !resolvedTheme null guard prevents icon flash on SSR hydration with next-themes
 - [Phase 03-polish]: URL updated via router.replace only on successful lookup submit (not keystrokes) per D-01
+- [Phase 03-polish]: All 4 card components promoted to client components to support CopyButton useState — safe since entire subtree is already under LookupDashboard client boundary
+- [Phase 03-polish]: navigator.clipboard.writeText used directly for copy — no third-party clipboard library (D-11)
+- [Phase 03-polish]: opacity-0 group-hover:opacity-100 pattern used for copy icon hover-reveal — consistent with UI-SPEC Interaction Contract (D-09)
 
 ### Pending Todos
 
@@ -97,6 +101,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-22T19:19:14.032Z
-Stopped at: Completed 03-01-PLAN.md
+Last session: 2026-03-22T19:19:48.382Z
+Stopped at: Completed 03-polish-02-PLAN.md
 Resume file: None

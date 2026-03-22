@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - Scaffold the project and build all 4 API route handlers with input detection utilities (completed 2026-03-21)
 - [x] **Phase 2: Core UI** - Build the useLookup hook, search bar, and all 4 card components to produce a working product (completed 2026-03-22)
-- [ ] **Phase 3: Polish** - Add URL state, "My IP" auto-load, copy-to-clipboard, dark mode, and responsive layout
+- [x] **Phase 3: Polish** - Add URL state, "My IP" auto-load, copy-to-clipboard, dark mode, and responsive layout (completed 2026-03-22)
 
 ## Phase Details
 
@@ -61,11 +61,11 @@ Plans:
   2. On initial page load with no `?q=` param, the dashboard auto-populates and searches the visitor's own public IP
   3. Clicking the copy icon on any record value writes it to the clipboard
   4. The dark/light mode toggle switches the theme without a flash of unstyled content on page load
-**Plans:** 1/2 plans executed
+**Plans:** 2/2 plans complete
 
 Plans:
 - [x] 03-01-PLAN.md — URL param read/write, My IP auto-load, dark mode toggle, geo route update
-- [ ] 03-02-PLAN.md — CopyButton component + wire copy-to-clipboard into all 4 card components
+- [x] 03-02-PLAN.md — CopyButton component + wire copy-to-clipboard into all 4 card components
 
 ## Progress
 
@@ -76,7 +76,7 @@ Phases execute in numeric order: 1 → 2 → 3
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete   | 2026-03-21 |
 | 2. Core UI | 4/4 | Complete   | 2026-03-22 |
-| 3. Polish | 1/2 | In Progress|  |
+| 3. Polish | 2/2 | Complete   | 2026-03-22 |
 
 *Roadmap created: 2026-03-21*
 *Granularity: COARSE — 3 phases, 9 plans total*
