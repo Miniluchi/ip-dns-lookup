@@ -14,6 +14,8 @@ import { WhoisCard } from '@/components/whois-card'
 export function LookupDashboard() {
   const [input, setInput] = useState('')
   const [validationError, setValidationError] = useState<string | null>(null)
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
   const { state, inputType, isLoading, lookup } = useLookup()
   const searchParams = useSearchParams()
   const router = useRouter()
@@ -55,7 +57,7 @@ export function LookupDashboard() {
 
   return (
     <main className="flex min-h-screen flex-col items-center px-4 py-12">
-      <div className="flex items-center gap-2 w-full max-w-2xl">
+      <div className="flex items-start gap-2 w-full max-w-2xl">
         <form onSubmit={handleSubmit} className="flex-1">
           <div className="flex gap-2">
             <input
@@ -81,9 +83,7 @@ export function LookupDashboard() {
           onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
           aria-label="Toggle theme"
         >
-          {!resolvedTheme ? null : resolvedTheme === 'dark'
-            ? <Sun className="size-4" />
-            : <Moon className="size-4" />}
+          {mounted && (resolvedTheme === 'dark' ? <Sun className="size-4" /> : <Moon className="size-4" />)}
         </Button>
       </div>
 
