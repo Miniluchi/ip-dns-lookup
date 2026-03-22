@@ -51,10 +51,12 @@ Exceptions:
 
 All type is Geist Sans (system fallback: `ui-sans-serif, system-ui, sans-serif`). No custom font sizes are declared — shadcn base-nova uses Tailwind's default type scale. The following roles map to that scale:
 
+**Declared weights: 2 — 400 (normal) and 600 (semibold).**
+
 | Role | Tailwind Class | Size | Weight | Line Height | Usage |
 |------|---------------|------|--------|-------------|-------|
 | Body | `text-sm` | 14px | 400 (normal) | 1.5 | Card field values (`<dd>`, table cells), helper text |
-| Label | `text-sm font-medium` | 14px | 500 (medium) | 1.5 | Card field labels (`<dt>`), DNS record type badges |
+| Label | `text-sm` | 14px | 400 (normal) | 1.5 | Card field labels (`<dt>`), DNS record type badges — differentiated from Body by `<dt>` semantics and position, not weight |
 | Heading | `text-base font-semibold` | 16px | 600 (semibold) | 1.2 | Card titles (`CardTitle`), section headings |
 | Display | `text-xl font-semibold` | 20px | 600 (semibold) | 1.2 | Page title / app name in header (if present) |
 
@@ -82,6 +84,14 @@ Accent reserved for:
 The `ghost` variant used for CopyButton and theme toggle uses `--accent` / `--muted` as hover background — NOT the primary accent. This keeps the 10% accent budget intact.
 
 Dark mode: `next-themes` with `attribute="class"` and `defaultTheme="system"` is already wired in `layout.tsx`. Theme toggle switches between `"light"` and `"dark"` via `setTheme`. `disableTransitionOnChange` prevents FOUC. Source: CONTEXT.md D-13 through D-16, RESEARCH.md Pattern 5.
+
+---
+
+## Visuals
+
+**Primary focal point:** Search input is the primary focal point; result cards are secondary.
+
+Visual hierarchy flows top-to-bottom: search row (input + submit button + theme toggle) commands the top of the viewport and receives the user's first interaction. The four data cards below are a uniform grid — no single card is elevated above the others.
 
 ---
 
