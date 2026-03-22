@@ -1,5 +1,10 @@
+import { Suspense } from 'react'
 import { LookupDashboard } from '@/components/lookup-dashboard'
 
 export default function Home() {
-  return <LookupDashboard />
+  return (
+    <Suspense fallback={null}>
+      <LookupDashboard />
+    </Suspense>
+  )
 }
