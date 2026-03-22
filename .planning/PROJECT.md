@@ -18,12 +18,12 @@ Any IP or domain resolved in one search, with all lookup types shown simultaneou
 - [x] Reverse DNS card — PTR lookup from IP to hostname — Validated in Phase 01: Foundation
 - [x] WHOIS card — registrar, registration/expiry dates, status (via RDAP) — Validated in Phase 01: Foundation
 
-### Active
+### Validated
 
-- [ ] 2×2 card grid layout, all cards load in parallel
-- [ ] Loading skeletons while queries are in flight
-- [ ] Error states per card (one failing API doesn't break others)
-- [ ] Modern dark/light UI using shadcn/ui components
+- [x] 2×2 card grid layout, all cards load in parallel — Validated in Phase 02: Core UI
+- [x] Loading skeletons while queries are in flight — Validated in Phase 02: Core UI
+- [x] Error states per card (one failing API doesn't break others) — Validated in Phase 02: Core UI
+- [x] Modern dark/light UI using shadcn/ui components — Validated in Phase 02: Core UI
 
 ### Out of Scope
 
@@ -49,9 +49,9 @@ Any IP or domain resolved in one search, with all lookup types shown simultaneou
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Free APIs only | Zero-config, no credentials to manage | — Pending |
-| Single search bar (auto-detect) | Faster UX — no need to know lookup type upfront | — Pending |
-| Parallel card loading | One slow API shouldn't block the rest | — Pending |
+| Free APIs only | Zero-config, no credentials to manage | Confirmed — all 4 APIs work without keys |
+| Single search bar (auto-detect) | Faster UX — no need to know lookup type upfront | Confirmed — detectInputType + sanitizeInput working |
+| Parallel card loading | One slow API shouldn't block the rest | Confirmed — Promise.allSettled, per-card error isolation |
 
 ## Evolution
 
@@ -71,4 +71,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-22 — Phase 01 complete (scaffold + utilities TDD + API routes)*
+*Last updated: 2026-03-22 — Phase 02 complete (full UI — search bar, 4 cards, parallel loading, skeletons, error states, responsive grid)*
