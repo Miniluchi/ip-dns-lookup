@@ -49,7 +49,7 @@ Only `button.tsx` currently exists in `src/components/ui/`. Both `skeleton` and 
 | 3xl | 64px | `py-16` | Reserved — not used in Phase 2 |
 
 **Exceptions:**
-- Search input field: `px-3 py-2` (12px × 8px) — standard text input sizing, not card-level spacing
+- Search input field: `px-3 py-2` (12px × 8px) — 12px is a multiple of 4; standard text input sizing, not card-level spacing
 - Skeleton bars: heights vary per card to approximate real data rows (see Skeleton section below)
 - DNS record table rows: `py-1` (4px top+bottom) per row — dense tabular data context
 
@@ -59,10 +59,12 @@ Only `button.tsx` currently exists in `src/components/ui/`. Both `skeleton` and 
 
 Fonts are loaded via `next/font/google` and mapped to CSS variables: `--font-geist-sans` (sans), `--font-geist-mono` (mono).
 
+**Exactly 2 weights are used across the entire phase: 400 (regular) and 600 (semibold).**
+
 | Role | Size | Weight | Line Height | Tailwind | Usage |
 |------|------|--------|-------------|----------|-------|
 | Body | 14px | 400 (regular) | 1.5 | `text-sm font-normal` | Card field values, DNS record data, search input text |
-| Label | 14px | 500 (medium) | 1.5 | `text-sm font-medium` | GeoCard field labels (`<dt>`), DNS record type section headers treated as labels |
+| Label | 14px | 400 (regular) | 1.5 | `text-sm font-normal` | GeoCard `<dt>` labels and WhoisCard `<dt>` labels — differentiated from values via `text-muted-foreground` color, not weight |
 | Card title | 16px | 600 (semibold) | 1.2 | `text-base font-semibold` | `CardTitle` in each card header ("Geolocation", "DNS Records", "Reverse DNS", "WHOIS") |
 | Page heading | 20px | 600 (semibold) | 1.2 | `text-xl font-semibold` | Not used in Phase 2 — reserved for Phase 3 branding |
 
@@ -84,7 +86,7 @@ This project uses shadcn's CSS variable system exclusively. No hardcoded hex or 
 | Secondary (30%) | `--card` | `bg-card` | shadcn Card component surface — distinct from page bg in dark mode |
 | Accent (10%) | `--primary` | `bg-primary` / `text-primary` | Search button (shadcn Button default variant) only |
 | Muted surface | `--muted` | `bg-muted` | Skeleton shimmer bars background |
-| Muted text | `--muted-foreground` | `text-muted-foreground` | Field labels, idle state copy, DNS section headers, TTL values |
+| Muted text | `--muted-foreground` | `text-muted-foreground` | Field labels (`<dt>`), idle state copy, DNS section headers, TTL values |
 | Destructive | `--destructive` | `text-destructive` | Validation error text below search bar; card error state icon + text |
 | Border | `--border` | `border-border` | Card borders (handled by shadcn Card automatically) |
 | Input | `--input` | `border-input` | Search text input border |
@@ -92,6 +94,12 @@ This project uses shadcn's CSS variable system exclusively. No hardcoded hex or 
 **Accent reserved for:** Search button (the single primary action element in Phase 2). No other element uses `bg-primary` or accent-weight color.
 
 **Dark mode:** Handled automatically by `ThemeProvider` (class strategy). The CSS variable values flip between `:root` and `.dark` blocks in `globals.css`. Component code must not write any `dark:` manual overrides — the variable system handles it.
+
+---
+
+## Visual Focal Points
+
+On initial load (idle state), the search bar is the primary visual focal point: it is centered, max-width constrained, and the only interactive element visible. After a lookup fires, the card grid becomes the secondary focal point, filling the lower portion of the page with structured results while the search bar remains anchored at the top.
 
 ---
 
@@ -193,7 +201,7 @@ Layout: `<dl>` with `grid grid-cols-[auto_1fr] gap-x-4 gap-y-1`
 | Lon | `data.lon` | `lon` | Numeric |
 
 `<dt>` classes: `text-sm text-muted-foreground`
-`<dd>` classes: `text-sm font-medium`
+`<dd>` classes: `text-sm font-normal`
 
 ### DnsCard (success)
 
