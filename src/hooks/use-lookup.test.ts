@@ -131,6 +131,26 @@ describe('performLookup', () => {
     }
   })
 
+  it('Test 7: fetch URLs use ?q= parameter (not ?query=)', async () => {
+    // Minimal mock responses for all 4 endpoints
+    mockFetch
+      .mockImplementation(() => makeOkResponse({}))
+
+    await performLookup('8.8.8.8')
+
+    const urls = mockFetch.mock.calls.map((c: unknown[]) => c[0] as string)
+    // Every URL must contain ?q= (the parameter API routes read)
+    for (const url of urls) {
+      expect(url).toContain('?q=')
+      expect(url).not.toContain('?query=')
+    }
+    // Verify exact parameter format for each endpoint
+    expect(urls).toContainEqual(expect.stringContaining('/api/geo?q=8.8.8.8'))
+    expect(urls).toContainEqual(expect.stringContaining('/api/dns?q=8.8.8.8'))
+    expect(urls).toContainEqual(expect.stringContaining('/api/rdns?q=8.8.8.8'))
+    expect(urls).toContainEqual(expect.stringContaining('/api/whois?q=8.8.8.8'))
+  })
+
   it('Test 6: API error response (non-ok status) sets card to error with message', async () => {
     const dnsData: DnsData = { records: { A: [], AAAA: [], MX: [], TXT: [], NS: [], CNAME: [] } }
     const rdnsData: RdnsData = { ptr: [] }
