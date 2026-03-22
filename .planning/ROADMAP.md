@@ -45,12 +45,12 @@ Plans:
   3. Killing one API route (e.g., commenting out `/api/whois`) causes only the WHOIS card to show an error; the other 3 cards still load correctly
   4. Searching a domain hides the Reverse DNS card; searching an IP hides no geo/rdns cards
   5. The 2-column card grid renders correctly and all card data is readable with shadcn/ui styling
-**Plans:** TBD
+**Plans:** 3 plans
 
 Plans:
-- [ ] 02-01: Build `useLookup` hook — `Promise.allSettled` orchestration, `CardState<T>` per card, `detectInputType` integration
-- [ ] 02-02: Build `LookupDashboard` client component with search bar and 2×2 card grid wiring
-- [ ] 02-03: Build `GeoCard`, `DnsCard`, `ReverseDnsCard`, `WhoisCard` — each renders skeleton / error / data from `CardState<T>` prop
+- [ ] 02-01-PLAN.md — Install shadcn skeleton+card, build useLookup hook with types and unit tests
+- [ ] 02-02-PLAN.md — Build all 4 card components (GeoCard, DnsCard, ReverseDnsCard, WhoisCard)
+- [ ] 02-03-PLAN.md — Build LookupDashboard, wire page.tsx, verify full flow
 
 ### Phase 3: Polish
 **Goal**: The tool is bookmarkable, starts with your own IP pre-loaded, supports copy-to-clipboard, and looks great in dark and light mode.
@@ -78,7 +78,6 @@ Phases execute in numeric order: 1 → 2 → 3
 | 2. Core UI | 0/3 | Not started | - |
 | 3. Polish | 0/2 | Not started | - |
 
----
 *Roadmap created: 2026-03-21*
 *Granularity: COARSE — 3 phases, 8 plans total*
 *Coverage: 23/23 v1 requirements mapped*
