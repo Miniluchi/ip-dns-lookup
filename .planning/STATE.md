@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 02-core-ui-01-PLAN.md
-last_updated: "2026-03-22T11:37:50.630Z"
+stopped_at: Completed 02-core-ui-02-PLAN.md
+last_updated: "2026-03-22T11:40:58.912Z"
 progress:
   total_phases: 3
   completed_phases: 1
   total_plans: 6
-  completed_plans: 4
+  completed_plans: 5
 ---
 
 # Project State
@@ -24,7 +24,7 @@ See: .planning/PROJECT.md (updated 2026-03-21)
 ## Current Position
 
 Phase: 02 (core-ui) — EXECUTING
-Plan: 2 of 3
+Plan: 3 of 3
 
 ## Performance Metrics
 
@@ -50,6 +50,7 @@ Plan: 2 of 3
 | Phase 01-foundation P02 | 4min | 2 tasks | 3 files |
 | Phase 01 P03 | 1 | 3 tasks | 4 files |
 | Phase 02-core-ui P01 | 3min | 2 tasks | 4 files |
+| Phase 02-core-ui P02 | 1min | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -70,6 +71,9 @@ Recent decisions affecting current work:
 - [Phase 02-core-ui]: performLookup exported as pure async function for unit testability in node vitest environment (no jsdom needed)
 - [Phase 02-core-ui]: fetchCard checks both !res.ok and json.error — defensive against API routes returning 200 with error body shape
 - [Phase 02-core-ui]: rdns card uses idleCard() for domain input — isIp flag computed before allSettled array construction
+- [Phase 02-core-ui]: 4-branch CardState rendering pattern established across all 4 card components (idle/loading/error/success)
+- [Phase 02-core-ui]: DnsCard uses RECORD_TYPES const array with .filter() to hide empty record types
+- [Phase 02-core-ui]: WhoisCard null/empty array fields use ?? em dash fallback (string nulls) and length===0 guard (array empties)
 
 ### Pending Todos
 
@@ -84,6 +88,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-22T11:37:50.628Z
-Stopped at: Completed 02-core-ui-01-PLAN.md
+Last session: 2026-03-22T11:40:58.910Z
+Stopped at: Completed 02-core-ui-02-PLAN.md
 Resume file: None

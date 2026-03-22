@@ -25,10 +25,10 @@
 
 ### Cards
 
-- [ ] **CARD-01**: Geolocation card displays country, city, region, ISP, org, ASN, timezone, lat/lon
-- [ ] **CARD-02**: DNS Records card displays all record types in grouped, readable format
-- [ ] **CARD-03**: Reverse DNS card displays PTR hostname(s) for IP inputs
-- [ ] **CARD-04**: WHOIS card displays registrar, creation date, expiry date, nameservers, EPP status
+- [x] **CARD-01**: Geolocation card displays country, city, region, ISP, org, ASN, timezone, lat/lon
+- [x] **CARD-02**: DNS Records card displays all record types in grouped, readable format
+- [x] **CARD-03**: Reverse DNS card displays PTR hostname(s) for IP inputs
+- [x] **CARD-04**: WHOIS card displays registrar, creation date, expiry date, nameservers, EPP status
 - [x] **CARD-05**: Each card shows a loading skeleton while its API call is in flight
 - [x] **CARD-06**: Each card shows an inline error state if its API call fails (other cards unaffected)
 - [x] **CARD-07**: Cards irrelevant to input type are hidden (e.g. Reverse DNS hidden for domain input)
@@ -38,7 +38,7 @@
 - [ ] **UI-01**: 2×2 card grid layout on desktop, single column on mobile
 - [ ] **UI-02**: Dark/light mode toggle using next-themes
 - [ ] **UI-03**: Copy-to-clipboard button on individual record values
-- [ ] **UI-04**: Modern shadcn/ui visual design — no default/unstyled components
+- [x] **UI-04**: Modern shadcn/ui visual design — no default/unstyled components
 
 ## v2 Requirements
 
@@ -81,17 +81,17 @@
 | SRCH-02 | Phase 2 | Complete |
 | SRCH-03 | Phase 3 | Pending |
 | SRCH-04 | Phase 3 | Pending |
-| CARD-01 | Phase 2 | Pending |
-| CARD-02 | Phase 2 | Pending |
-| CARD-03 | Phase 2 | Pending |
-| CARD-04 | Phase 2 | Pending |
+| CARD-01 | Phase 2 | Complete |
+| CARD-02 | Phase 2 | Complete |
+| CARD-03 | Phase 2 | Complete |
+| CARD-04 | Phase 2 | Complete |
 | CARD-05 | Phase 2 | Complete |
 | CARD-06 | Phase 2 | Complete |
 | CARD-07 | Phase 2 | Complete |
 | UI-01 | Phase 2 | Pending |
 | UI-02 | Phase 3 | Pending |
 | UI-03 | Phase 3 | Pending |
-| UI-04 | Phase 2 | Pending |
+| UI-04 | Phase 2 | Complete |
 
 **Coverage:**
 - v1 requirements: 23 total
