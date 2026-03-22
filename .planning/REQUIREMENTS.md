@@ -20,8 +20,8 @@
 
 - [x] **SRCH-01**: Single search bar accepts any IP address or domain name
 - [x] **SRCH-02**: Pressing Enter or clicking Search fires all 4 lookups in parallel via `Promise.allSettled`
-- [ ] **SRCH-03**: URL `?q=` param is set on search, enabling shareable/bookmarkable lookups
-- [ ] **SRCH-04**: Page loads with user's own IP pre-populated (via ip-api.com no-arg call)
+- [x] **SRCH-03**: URL `?q=` param is set on search, enabling shareable/bookmarkable lookups
+- [x] **SRCH-04**: Page loads with user's own IP pre-populated (via ip-api.com no-arg call)
 
 ### Cards
 
@@ -36,7 +36,7 @@
 ### UI & UX
 
 - [x] **UI-01**: 2×2 card grid layout on desktop, single column on mobile
-- [ ] **UI-02**: Dark/light mode toggle using next-themes
+- [x] **UI-02**: Dark/light mode toggle using next-themes
 - [ ] **UI-03**: Copy-to-clipboard button on individual record values
 - [x] **UI-04**: Modern shadcn/ui visual design — no default/unstyled components
 
@@ -79,8 +79,8 @@
 | FOUND-08 | Phase 1 | Complete |
 | SRCH-01 | Phase 2 | Complete |
 | SRCH-02 | Phase 2 | Complete |
-| SRCH-03 | Phase 3 | Pending |
-| SRCH-04 | Phase 3 | Pending |
+| SRCH-03 | Phase 3 | Complete |
+| SRCH-04 | Phase 3 | Complete |
 | CARD-01 | Phase 2 | Complete |
 | CARD-02 | Phase 2 | Complete |
 | CARD-03 | Phase 2 | Complete |
@@ -89,7 +89,7 @@
 | CARD-06 | Phase 2 | Complete |
 | CARD-07 | Phase 2 | Complete |
 | UI-01 | Phase 2 | Complete |
-| UI-02 | Phase 3 | Pending |
+| UI-02 | Phase 3 | Complete |
 | UI-03 | Phase 3 | Pending |
 | UI-04 | Phase 2 | Complete |
 
