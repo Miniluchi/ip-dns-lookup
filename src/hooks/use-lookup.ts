@@ -104,12 +104,12 @@ export async function performLookup(raw: string): Promise<PerformLookupResult> {
   // Fire parallel API calls. rdns stays idle for domain input.
   const [geoResult, dnsResult, rdnsResult, whoisResult] =
     await Promise.allSettled([
-      fetchCard<GeoData>(`/api/geo?query=${encodeURIComponent(sanitized)}`),
-      fetchCard<DnsData>(`/api/dns?query=${encodeURIComponent(sanitized)}`),
+      fetchCard<GeoData>(`/api/geo?q=${encodeURIComponent(sanitized)}`),
+      fetchCard<DnsData>(`/api/dns?q=${encodeURIComponent(sanitized)}`),
       isIp
-        ? fetchCard<RdnsData>(`/api/rdns?query=${encodeURIComponent(sanitized)}`)
+        ? fetchCard<RdnsData>(`/api/rdns?q=${encodeURIComponent(sanitized)}`)
         : Promise.resolve(idleCard<RdnsData>()),
-      fetchCard<WhoisData>(`/api/whois?query=${encodeURIComponent(sanitized)}`),
+      fetchCard<WhoisData>(`/api/whois?q=${encodeURIComponent(sanitized)}`),
     ])
 
   function settle<T>(result: PromiseSettledResult<CardState<T>>): CardState<T> {
