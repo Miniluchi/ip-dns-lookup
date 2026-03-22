@@ -61,11 +61,11 @@ Plans:
   2. On initial page load with no `?q=` param, the dashboard auto-populates and searches the visitor's own public IP
   3. Clicking the copy icon on any record value writes it to the clipboard
   4. The dark/light mode toggle switches the theme without a flash of unstyled content on page load
-**Plans:** TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 03-01: Implement `?q=` URL param — read on mount to auto-trigger lookup; update on each search
-- [ ] 03-02: Add "My IP" auto-load on initial mount (no `?q=` param); add copy-to-clipboard to card record values; integrate dark/light toggle
+- [ ] 03-01-PLAN.md — URL param read/write, My IP auto-load, dark mode toggle, geo route update
+- [ ] 03-02-PLAN.md — CopyButton component + wire copy-to-clipboard into all 4 card components
 
 ## Progress
 
@@ -79,5 +79,5 @@ Phases execute in numeric order: 1 → 2 → 3
 | 3. Polish | 0/2 | Not started | - |
 
 *Roadmap created: 2026-03-21*
-*Granularity: COARSE — 3 phases, 8 plans total*
+*Granularity: COARSE — 3 phases, 9 plans total*
 *Coverage: 23/23 v1 requirements mapped*
