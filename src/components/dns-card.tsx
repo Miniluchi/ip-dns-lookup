@@ -1,7 +1,10 @@
+'use client'
+
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 import { Skeleton } from '@/components/ui/skeleton'
 import { AlertCircle } from 'lucide-react'
 import type { CardState, DnsData } from '@/hooks/use-lookup'
+import { CopyButton } from '@/components/copy-button'
 
 const RECORD_TYPES = ['A', 'AAAA', 'MX', 'TXT', 'NS', 'CNAME'] as const
 
@@ -54,7 +57,7 @@ export function DnsCard({ state }: DnsCardProps) {
                     <tbody>
                       {state.data!.records[type].map((rec, i) => (
                         <tr key={i} className="border-b border-border last:border-0">
-                          <td className="py-1 font-mono">{rec.data}</td>
+                          <td className="py-1 font-mono"><span className="flex items-center gap-1 group">{rec.data}<CopyButton value={rec.data} /></span></td>
                           <td className="py-1 text-right text-muted-foreground tabular-nums">
                             {rec.TTL}s
                           </td>

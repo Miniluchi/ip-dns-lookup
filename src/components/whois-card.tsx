@@ -1,7 +1,10 @@
+'use client'
+
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 import { Skeleton } from '@/components/ui/skeleton'
 import { AlertCircle } from 'lucide-react'
 import type { CardState, WhoisData } from '@/hooks/use-lookup'
+import { CopyButton } from '@/components/copy-button'
 
 interface WhoisCardProps {
   state: CardState<WhoisData>
@@ -39,13 +42,13 @@ export function WhoisCard({ state }: WhoisCardProps) {
         {state.status === 'success' && state.data && (
           <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2">
             <dt className="text-sm text-muted-foreground">Registrar</dt>
-            <dd className="text-sm">{state.data.registrar ?? '\u2014'}</dd>
+            <dd className="text-sm"><div className="flex items-center gap-1 group">{state.data.registrar ?? '\u2014'}<CopyButton value={state.data.registrar ?? '\u2014'} /></div></dd>
 
             <dt className="text-sm text-muted-foreground">Created</dt>
-            <dd className="text-sm">{state.data.creationDate ?? '\u2014'}</dd>
+            <dd className="text-sm"><div className="flex items-center gap-1 group">{state.data.creationDate ?? '\u2014'}<CopyButton value={state.data.creationDate ?? '\u2014'} /></div></dd>
 
             <dt className="text-sm text-muted-foreground">Expires</dt>
-            <dd className="text-sm">{state.data.expirationDate ?? '\u2014'}</dd>
+            <dd className="text-sm"><div className="flex items-center gap-1 group">{state.data.expirationDate ?? '\u2014'}<CopyButton value={state.data.expirationDate ?? '\u2014'} /></div></dd>
 
             <dt className="text-sm text-muted-foreground">Nameservers</dt>
             <dd className="text-sm">
@@ -55,7 +58,7 @@ export function WhoisCard({ state }: WhoisCardProps) {
                 <ul className="space-y-0.5">
                   {state.data.nameservers.map((ns, i) => (
                     <li key={i} className="font-mono text-sm">
-                      {ns}
+                      <span className="flex items-center gap-1 group">{ns}<CopyButton value={ns} /></span>
                     </li>
                   ))}
                 </ul>
@@ -69,12 +72,10 @@ export function WhoisCard({ state }: WhoisCardProps) {
               ) : (
                 <div className="flex flex-wrap gap-1">
                   {state.data.status.map((code, i) => (
-                    <code
-                      key={i}
-                      className="text-xs font-mono bg-muted px-1 rounded"
-                    >
-                      {code}
-                    </code>
+                    <span key={i} className="flex items-center gap-1 group">
+                      <code className="text-xs font-mono bg-muted px-1 rounded">{code}</code>
+                      <CopyButton value={code} />
+                    </span>
                   ))}
                 </div>
               )}

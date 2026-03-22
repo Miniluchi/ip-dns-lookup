@@ -1,7 +1,10 @@
+'use client'
+
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 import { Skeleton } from '@/components/ui/skeleton'
 import { AlertCircle } from 'lucide-react'
 import type { CardState, RdnsData } from '@/hooks/use-lookup'
+import { CopyButton } from '@/components/copy-button'
 
 interface ReverseDnsCardProps {
   state: CardState<RdnsData>
@@ -41,7 +44,7 @@ export function ReverseDnsCard({ state }: ReverseDnsCardProps) {
               <ul className="space-y-1">
                 {state.data.ptr.map((host, i) => (
                   <li key={i} className="text-sm font-mono">
-                    {host}
+                    <div className="flex items-center gap-1 group">{host}<CopyButton value={host} /></div>
                   </li>
                 ))}
               </ul>

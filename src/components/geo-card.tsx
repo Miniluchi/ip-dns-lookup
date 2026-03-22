@@ -1,7 +1,10 @@
+'use client'
+
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 import { Skeleton } from '@/components/ui/skeleton'
 import { AlertCircle } from 'lucide-react'
 import type { CardState, GeoData } from '@/hooks/use-lookup'
+import { CopyButton } from '@/components/copy-button'
 
 interface GeoCardProps {
   state: CardState<GeoData>
@@ -39,31 +42,31 @@ export function GeoCard({ state }: GeoCardProps) {
         {state.status === 'success' && state.data && (
           <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1">
             <dt className="text-sm text-muted-foreground">Country</dt>
-            <dd className="text-sm">{state.data.country}</dd>
+            <dd className="text-sm"><div className="flex items-center gap-1 group">{state.data.country}<CopyButton value={state.data.country} /></div></dd>
 
             <dt className="text-sm text-muted-foreground">City</dt>
-            <dd className="text-sm">{state.data.city}</dd>
+            <dd className="text-sm"><div className="flex items-center gap-1 group">{state.data.city}<CopyButton value={state.data.city} /></div></dd>
 
             <dt className="text-sm text-muted-foreground">Region</dt>
-            <dd className="text-sm">{state.data.regionName}</dd>
+            <dd className="text-sm"><div className="flex items-center gap-1 group">{state.data.regionName}<CopyButton value={state.data.regionName} /></div></dd>
 
             <dt className="text-sm text-muted-foreground">ISP</dt>
-            <dd className="text-sm">{state.data.isp}</dd>
+            <dd className="text-sm"><div className="flex items-center gap-1 group">{state.data.isp}<CopyButton value={state.data.isp} /></div></dd>
 
             <dt className="text-sm text-muted-foreground">Org</dt>
-            <dd className="text-sm">{state.data.org}</dd>
+            <dd className="text-sm"><div className="flex items-center gap-1 group">{state.data.org}<CopyButton value={state.data.org} /></div></dd>
 
             <dt className="text-sm text-muted-foreground">AS</dt>
-            <dd className="text-sm">{state.data.as}</dd>
+            <dd className="text-sm"><div className="flex items-center gap-1 group">{state.data.as}<CopyButton value={state.data.as} /></div></dd>
 
             <dt className="text-sm text-muted-foreground">Timezone</dt>
-            <dd className="text-sm">{state.data.timezone}</dd>
+            <dd className="text-sm"><div className="flex items-center gap-1 group">{state.data.timezone}<CopyButton value={state.data.timezone} /></div></dd>
 
             <dt className="text-sm text-muted-foreground">Lat</dt>
-            <dd className="text-sm">{state.data.lat}</dd>
+            <dd className="text-sm"><div className="flex items-center gap-1 group">{state.data.lat}<CopyButton value={String(state.data.lat)} /></div></dd>
 
             <dt className="text-sm text-muted-foreground">Lon</dt>
-            <dd className="text-sm">{state.data.lon}</dd>
+            <dd className="text-sm"><div className="flex items-center gap-1 group">{state.data.lon}<CopyButton value={String(state.data.lon)} /></div></dd>
           </dl>
         )}
       </CardContent>
