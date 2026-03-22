@@ -18,8 +18,8 @@
 
 ### Search
 
-- [ ] **SRCH-01**: Single search bar accepts any IP address or domain name
-- [ ] **SRCH-02**: Pressing Enter or clicking Search fires all 4 lookups in parallel via `Promise.allSettled`
+- [x] **SRCH-01**: Single search bar accepts any IP address or domain name
+- [x] **SRCH-02**: Pressing Enter or clicking Search fires all 4 lookups in parallel via `Promise.allSettled`
 - [ ] **SRCH-03**: URL `?q=` param is set on search, enabling shareable/bookmarkable lookups
 - [ ] **SRCH-04**: Page loads with user's own IP pre-populated (via ip-api.com no-arg call)
 
@@ -29,9 +29,9 @@
 - [ ] **CARD-02**: DNS Records card displays all record types in grouped, readable format
 - [ ] **CARD-03**: Reverse DNS card displays PTR hostname(s) for IP inputs
 - [ ] **CARD-04**: WHOIS card displays registrar, creation date, expiry date, nameservers, EPP status
-- [ ] **CARD-05**: Each card shows a loading skeleton while its API call is in flight
-- [ ] **CARD-06**: Each card shows an inline error state if its API call fails (other cards unaffected)
-- [ ] **CARD-07**: Cards irrelevant to input type are hidden (e.g. Reverse DNS hidden for domain input)
+- [x] **CARD-05**: Each card shows a loading skeleton while its API call is in flight
+- [x] **CARD-06**: Each card shows an inline error state if its API call fails (other cards unaffected)
+- [x] **CARD-07**: Cards irrelevant to input type are hidden (e.g. Reverse DNS hidden for domain input)
 
 ### UI & UX
 
@@ -77,17 +77,17 @@
 | FOUND-06 | Phase 1 | Complete |
 | FOUND-07 | Phase 1 | Complete |
 | FOUND-08 | Phase 1 | Complete |
-| SRCH-01 | Phase 2 | Pending |
-| SRCH-02 | Phase 2 | Pending |
+| SRCH-01 | Phase 2 | Complete |
+| SRCH-02 | Phase 2 | Complete |
 | SRCH-03 | Phase 3 | Pending |
 | SRCH-04 | Phase 3 | Pending |
 | CARD-01 | Phase 2 | Pending |
 | CARD-02 | Phase 2 | Pending |
 | CARD-03 | Phase 2 | Pending |
 | CARD-04 | Phase 2 | Pending |
-| CARD-05 | Phase 2 | Pending |
-| CARD-06 | Phase 2 | Pending |
-| CARD-07 | Phase 2 | Pending |
+| CARD-05 | Phase 2 | Complete |
+| CARD-06 | Phase 2 | Complete |
+| CARD-07 | Phase 2 | Complete |
 | UI-01 | Phase 2 | Pending |
 | UI-02 | Phase 3 | Pending |
 | UI-03 | Phase 3 | Pending |

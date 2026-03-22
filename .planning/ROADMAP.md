@@ -45,10 +45,10 @@ Plans:
   3. Killing one API route (e.g., commenting out `/api/whois`) causes only the WHOIS card to show an error; the other 3 cards still load correctly
   4. Searching a domain hides the Reverse DNS card; searching an IP hides no geo/rdns cards
   5. The 2-column card grid renders correctly and all card data is readable with shadcn/ui styling
-**Plans:** 3 plans
+**Plans:** 1/3 plans executed
 
 Plans:
-- [ ] 02-01-PLAN.md — Install shadcn skeleton+card, build useLookup hook with types and unit tests
+- [x] 02-01-PLAN.md — Install shadcn skeleton+card, build useLookup hook with types and unit tests
 - [ ] 02-02-PLAN.md — Build all 4 card components (GeoCard, DnsCard, ReverseDnsCard, WhoisCard)
 - [ ] 02-03-PLAN.md — Build LookupDashboard, wire page.tsx, verify full flow
 
@@ -75,7 +75,7 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete   | 2026-03-21 |
-| 2. Core UI | 0/3 | Not started | - |
+| 2. Core UI | 1/3 | In Progress|  |
 | 3. Polish | 0/2 | Not started | - |
 
 *Roadmap created: 2026-03-21*
