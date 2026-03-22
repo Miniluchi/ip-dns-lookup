@@ -35,7 +35,7 @@
 
 ### UI & UX
 
-- [ ] **UI-01**: 2×2 card grid layout on desktop, single column on mobile
+- [x] **UI-01**: 2×2 card grid layout on desktop, single column on mobile
 - [ ] **UI-02**: Dark/light mode toggle using next-themes
 - [ ] **UI-03**: Copy-to-clipboard button on individual record values
 - [x] **UI-04**: Modern shadcn/ui visual design — no default/unstyled components
@@ -88,7 +88,7 @@
 | CARD-05 | Phase 2 | Complete |
 | CARD-06 | Phase 2 | Complete |
 | CARD-07 | Phase 2 | Complete |
-| UI-01 | Phase 2 | Pending |
+| UI-01 | Phase 2 | Complete |
 | UI-02 | Phase 3 | Pending |
 | UI-03 | Phase 3 | Pending |
 | UI-04 | Phase 2 | Complete |
