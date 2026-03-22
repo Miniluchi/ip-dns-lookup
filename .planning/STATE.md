@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 02-core-ui-03-PLAN.md
-last_updated: "2026-03-22T11:44:00.575Z"
+stopped_at: Completed 02-core-ui-04-PLAN.md
+last_updated: "2026-03-22T12:03:33.751Z"
 progress:
   total_phases: 3
   completed_phases: 2
-  total_plans: 6
-  completed_plans: 6
+  total_plans: 7
+  completed_plans: 7
 ---
 
 # Project State
@@ -24,7 +24,7 @@ See: .planning/PROJECT.md (updated 2026-03-21)
 ## Current Position
 
 Phase: 02 (core-ui) — EXECUTING
-Plan: 3 of 3
+Plan: 2 of 4
 
 ## Performance Metrics
 
@@ -52,6 +52,7 @@ Plan: 3 of 3
 | Phase 02-core-ui P01 | 3min | 2 tasks | 4 files |
 | Phase 02-core-ui P02 | 1min | 2 tasks | 4 files |
 | Phase 02-core-ui P03 | 1min | 2 tasks | 2 files |
+| Phase 02-core-ui P04 | 5min | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -77,6 +78,7 @@ Recent decisions affecting current work:
 - [Phase 02-core-ui]: WhoisCard null/empty array fields use ?? em dash fallback (string nulls) and length===0 guard (array empties)
 - [Phase 02-core-ui]: LookupDashboard is the sole export of lookup-dashboard.tsx — page.tsx remains a Server Component with no 'use client'
 - [Phase 02-core-ui]: ReverseDnsCard removed from DOM (not CSS hidden) when inputType === 'domain' — consistent with grid reflow intent
+- [Phase 02-core-ui]: TDD RED/GREEN cycle enforced for URL parameter contract test — test written first against buggy code, fix applied after confirmed failure
 
 ### Pending Todos
 
@@ -91,6 +93,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-22T11:44:00.573Z
-Stopped at: Completed 02-core-ui-03-PLAN.md
+Last session: 2026-03-22T12:03:33.749Z
+Stopped at: Completed 02-core-ui-04-PLAN.md
 Resume file: None
